@@ -265,7 +265,7 @@ server:
     ## Prometheus server Ingress hostnames with optional path
     ## Must be provided if Ingress is enabled
     ##
-    hosts: [prometheus.server.local]
+    hosts: prometheus.server.local
     #   - prometheus.domain.com
     #   - domain.com/prometheus
 
