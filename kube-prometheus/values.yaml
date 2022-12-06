@@ -1410,7 +1410,7 @@ prometheus:
 alertmanager:
   ## @param alertmanager.enabled Deploy Alertmanager to the cluster
   ##
-  enabled: true
+  enabled: false
   ## Bitnami Alertmanager image version
   ## ref: https://hub.docker.com/r/bitnami/prometheus-operator/tags/
   ## @param alertmanager.image.registry Prometheus image registry
@@ -1970,7 +1970,7 @@ kubelet:
 blackboxExporter:
   ## @param blackboxExporter.enabled Enable Blackbox Exporter deployment
   ##
-  enabled: true
+  enabled: false
   ## Bitnami Alertmanager image version
   ## ref: https://hub.docker.com/r/bitnami/prometheus-operator/tags/
   ## @param blackboxExporter.image.registry Blackbox Exporter image registry
@@ -2326,7 +2326,7 @@ blackboxExporter:
 kubeApiServer:
   ## @param kubeApiServer.enabled Create a ServiceMonitor to scrape kube-apiserver service
   ##
-  enabled: true
+  enabled: false
   serviceMonitor:
     ## @param kubeApiServer.serviceMonitor.interval Scrape interval. If not set, the Prometheus default scrape interval is used.
     ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#endpoint
@@ -2400,7 +2400,7 @@ kubeControllerManager:
 kubeScheduler:
   ## @param kubeScheduler.enabled Create a ServiceMonitor to scrape kube-scheduler service
   ##
-  enabled: true
+  enabled: false
   ## @param kubeScheduler.endpoints If your kube scheduler is not deployed as a pod, specify IPs it can be found on
   ## endpoints:
   ##  - 10.141.4.22
@@ -2469,7 +2469,7 @@ kubeScheduler:
 coreDns:
   ## @param coreDns.enabled Create a ServiceMonitor to scrape coredns service
   ##
-  enabled: true
+  enabled: false
   ## @param coreDns.namespace Namespace where core dns service is deployed.
   ##
   namespace: kube-system
@@ -2480,7 +2480,7 @@ coreDns:
   ## @param coreDns.service.selector Optional PODs Label selector for the service
   ##
   service:
-    enabled: true
+    enabled: false
     ports:
       http: 9153
     targetPorts:
@@ -2515,7 +2515,7 @@ coreDns:
 kubeProxy:
   ## @param kubeProxy.enabled Create a ServiceMonitor to scrape the kube-proxy Service
   ##
-  enabled: true
+  enabled: false
   ## @param kubeProxy.endpoints If your kube-proxy is not deployed as a pod, specify IPs it can be found on
   ## endpoints:
   ##  - 10.141.4.22
@@ -2532,7 +2532,7 @@ kubeProxy:
   ## @param kubeProxy.service.selector Optional PODs Label selector for the service
   ##
   service:
-    enabled: true
+    enabled: false
     ports:
       http: 10249
     targetPorts:
